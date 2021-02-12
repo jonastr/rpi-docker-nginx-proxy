@@ -333,6 +333,9 @@ server {
 		include /etc/nginx/vhost.d/default_location;
 		{{ end }}
 	}
+
+        client_max_body_size 10G;
+        proxy_request_buffering off;
 }
 
 {{ end }}
