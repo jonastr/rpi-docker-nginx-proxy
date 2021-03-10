@@ -5,6 +5,7 @@ LABEL maintainer="Alexander Krause <akr@informatik.uni-kiel.de>"
 
 # Install wget and install/updates certificates
 RUN apt-get update \
+ && apt-get upgrade -y \
  && apt-get install -y -q --no-install-recommends \
     ca-certificates \
     wget \
